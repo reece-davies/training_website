@@ -1,0 +1,150 @@
+------------- Display circuit(s) - before connected to database -------------
+
+
+<div class="container-table100" style="padding-bottom: 100px;">
+
+            <div class="circuit-title">  
+              <h1 class="wow" data-wow-delay="0.1s" style="float: left; color: white; padding-bottom: 25px; padding-top: 5px; padding-left: 5px; padding-right: 5px; font-size: 25px;">Circuit Title</h1>
+              <!--<h1 class="wow" data-wow-delay="0.1s" style="float: right; color: white; padding-bottom: 25px; padding-top: 5px; padding-left: 5px; padding-right: 5px; font-size: 25px;">() Edit</h1> -->
+            </div>
+
+            
+            <div class="wrap-table100" >
+
+              <div class="table">
+                    <div class="row header">
+                        <div class="cell">
+                          Exercise Title
+                        </div>
+                        <div class="cell">
+                          Weight
+                        </div>
+                        <div class="cell">
+                          Reps
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="cell" data-title="Exercise Title">
+                          Title
+                        </div>
+                        <div class="cell" data-title="Weight">
+                          KG
+                        </div>
+                        <div class="cell" data-title="Reps">
+                          10
+                        </div>
+                      </div>
+                  </div>
+                  
+              </div>
+
+              <div class="circuit-footer">  
+                <h1 class="wow" data-wow-delay="0.1s" style="float: left; color: white; font-size: 20px;">Rounds: </h1>
+                <h1 class="wow" data-wow-delay="0.1s" style="float: right; color: white; font-size: 20px;">Rest: </h1>
+              </div>
+
+        </div>
+
+
+
+
+
+--------------- Popup menus -----------------
+
+            <!-- Title popup box -->
+            <div id="popupTitle" class="overlay">
+              <div class="popup">
+
+                <h2 style="font-size: 40px; padding: 15px;"></h2>
+                <a class="close" href="#">&times;</a>
+
+                <div class="content" style="padding: 10px;">
+                  
+                <!-- Stuff goes here -->
+
+                <div class="container-login100" style="min-height: 1vh;">
+                  <div class="wrap-login100">
+                    <form class="login100-form validate-form" action="php/alter-circuit-title.inc.php" method="post">
+                      <span class="login100-form-title p-b-34 p-t-27"> <!-- style="color: black;" -->
+
+                        EDIT CIRCUIT TITLE
+
+                      </span>
+
+                      <div class="wrap-input100 validate-input" data-validate = "Input title">
+                        <input class="input100" type="text" name="circTitle" placeholder="Circuit Title">
+                      </div>
+
+                      <?php
+                       echo '
+                       <div class="wrap-input100 validate-input" data-validate = "Input programme ID" style="display: none;">
+                        <input class="input100" type="text" name="proid" value="'.  $proId .'">>
+                      </div>
+                       ';
+                      ?>
+
+
+                      <div class="container-login100-form-btn">
+                        <button class="login100-form-btn"  type="submit" name="alter-circuit-title-submit">
+                          Change
+                        </button>
+                      </div>
+
+                    </form>
+                    </div>
+                  </div>
+
+                <!-- END OF CONTENT -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Exercise popup box -->
+            <div id="popupExercise" class="overlay">
+              <div class="popup">
+
+                <h2 style="font-size: 40px; padding: 15px;">EDIT EXERCISE</h2>
+                <a class="close" href="#">&times;</a>
+
+                <div class="content" style="padding: 10px;">
+                  
+                <!-- Stuff goes here -->
+
+                <!-- END OF CONTENT -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Rounds popup box -->
+            <div id="popupRounds" class="overlay">
+              <div class="popup">
+
+                <h2 style="font-size: 40px; padding: 15px;">EDIT CIRCUIT ROUNDS</h2>
+                <a class="close" href="#">&times;</a>
+
+                <div class="content" style="padding: 10px;">
+                  
+                <!-- Stuff goes here -->
+
+                <!-- END OF CONTENT -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Rest popup box -->
+            <div id="popupRest" class="overlay">
+              <div class="popup">
+
+                <h2 style="font-size: 40px; padding: 15px;">EDIT CIRCUIT REST</h2>
+                <a class="close" href="#">&times;</a>
+
+                <div class="content" style="padding: 10px;">
+                  
+                <!-- Stuff goes here -->
+
+                <!-- END OF CONTENT -->
+                </div>
+              </div>
+            </div>
+

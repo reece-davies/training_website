@@ -1,0 +1,49 @@
+blue		#00aeda
+blue-purple	#7579ff
+purple	#b224ef
+dark grey	#2E2E30
+light grey 	#ebebeb
+even lighter grey #f2f2f2
+
+////////////////////////////////////////////////////////////////////
+
+Inessential Changes (don't really need): 
+- Allow for autofill on failed form submissions
+- Do something with "remember me" on login
+- Finetune error handling response messages
+- Create exercise number for "new-circuit" page
+- Refine "Add exercise" button in "new-circuit.php" to not remove previous exercise input values.
+- Better navigation back to specific programme (from "change X" - back buttons)
+- Allow for input boxes to keep text when it is selected, until user starts typing
+- Change the styling of the new-programme popup box form
+- Allow for 'Edit programmes' to have a hover effect
+- Implement better JavaScript into the forms (better error exceptions)
+- Add a numbering system to displayed exercises in a circuit
+- Allow user to add or remove exercises for circuit
+
+Important Changes (that HAVE to be done before submission):
+- Change the index page (and footer)
+
+Potential Changes (I would like but are not essential):
+- Show exercise/circuit history
+- Allow user to log sessions
+- Allow user to delete programmes and circuits {add delete button on programmes listview}
+- Change programme list to be chunky blocks (or make table differ from circuits table)
+- Allow user to change password (forgot password)
+- Allow for better way of indiciation of ability to edit circuits (tooltip on hover?)
+
+////////////////////////////////////////////////////////////////////
+
+NOTE: Add column to database to state whether programme/circuit has been deleted.
+      If deleted, have specific value. When items are loaded on the website, have
+      it check for this column. If the column has the specific value (eg "deleted"),
+      skip this item. Will need to figure out way of ACTUALLY deleting items from
+      the database for when there are loads of users. Use of specific value can 
+      be shown on social network youtube guide (final/final-ish episode).
+
+--- Plan for changing circuit contents ---
+// Scan database for this specific circuit
+// Get the circuit <item we're changing> from circuits tables
+// Start new database query; get MAX outdated_X_id from archived table
+// Start new database query; post old circuit <item> in archived table
+// UPDATE <item> to new circuit <item> in circuits table
